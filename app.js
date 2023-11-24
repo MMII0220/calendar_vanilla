@@ -26,6 +26,11 @@ window.addEventListener("DOMContentLoaded", () => {
 
     const firstDay = new Date(currentYear, currentMonth, 1);
     const lastDay = new Date(currentYear, currentMonth + 1, 0);
+    // currentYear - this year
+    // currentMonth + 1 - Month in js start from 0 jan, we shoud add + 1 to make it next month.
+    // 0 - this thing turn month to prev last day. Like:
+    // new Date(currentYear, currentMonth, 1) - november 1 day
+    // new Date(currentYear, currentMonth + 1, 0) - this currentMonth + 1 shpuld make it decemner but thanks to zero it will be november 30
 
     let currentDate = new Date(firstDay);
 

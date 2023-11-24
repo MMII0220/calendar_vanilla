@@ -55,3 +55,9 @@ button:hover {
 #calendar-table td:hover {
   background-color: #ecf0f1;
 }
+
+.other-month {
+  opacity: 0.5;
+  background: rgb(215 215 215);
+  border: 1px solid #ddd;
+}
