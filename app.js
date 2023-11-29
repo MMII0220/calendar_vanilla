@@ -3,14 +3,15 @@ window.addEventListener("DOMContentLoaded", () => {
 
   let currentMonth = new Date().getMonth();
   let currentYear = new Date().getFullYear();
-  let next = document.querySelector("#next"),
-    prev = document.querySelector("#prev");
+  let next = document.querySelector("#next");
+  let prev = document.querySelector("#prev");
 
   next.addEventListener("click", nextMonth);
   prev.addEventListener("click", prevMonth);
 
   updateCalendar();
 
+  // Calendar generater
   function updateCalendar() {
     const monthYearElement = document.getElementById("month-year");
     const calendarBody = document.getElementById("calendar-body");
@@ -53,6 +54,7 @@ window.addEventListener("DOMContentLoaded", () => {
     }
   }
 
+  // click prev button, generate calendar
   function prevMonth() {
     currentMonth = (currentMonth - 1 + 12) % 12;
     if (currentMonth === 11) {
@@ -61,6 +63,7 @@ window.addEventListener("DOMContentLoaded", () => {
     updateCalendar();
   }
 
+  // click next button, generate calendar
   function nextMonth() {
     currentMonth = (currentMonth + 1) % 12;
     if (currentMonth === 0) {
@@ -69,6 +72,7 @@ window.addEventListener("DOMContentLoaded", () => {
     updateCalendar();
   }
 
+  // Return MonthName
   function getMonthName(monthIndex) {
     const months = [
       "Январь",
